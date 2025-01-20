@@ -13,7 +13,7 @@ function RandomMeme() {
        
         <h1 
         className='text-2xl text-center font-semibold '>
-        Random Meme</h1>
+        Random Gifs</h1>
 
         <div 
         className='h-[0.8px] w-full bg-gray-700 mt-2'>

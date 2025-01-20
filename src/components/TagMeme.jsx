@@ -15,7 +15,7 @@ function TagMeme() {
        
         <h1 
         className='text-2xl text-center font-semibold '>
-        Random {tag} Meme</h1>
+        Random {tag} Gifs</h1>
 
         <div 
         className='h-[0.8px] w-full bg-gray-700 mt-2'>
