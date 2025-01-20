@@ -1,38 +1,15 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import Loading from './Loading';
+import useGif from '../hooks/useGif';
 
 function RandomMeme() {
 
-    const url=`https://api.giphy.com/v1/gifs/random?api_key=kC0kZcGTTNZITKMQPLaxGwHeGpwYMn4S`;
-
-    const [gif, setGif] = useState('');
-
-    const [loading, setLoading]=useState(false);
-
-    function getGif(){
-        setLoading(true);
-        axios(url)
-        .then((res)=>{
-            setGif(res.data.data.images.original.url);
-            setLoading(false);
-            console.log(res.data.data.images.original.url);
-            
-        })
-        .catch((err)=>console.error(err))
-
-        
-        
-    }
-
-    useEffect(()=>{
-        getGif();
-    }, [])
-
+  const {gif,loading, getGif}=useGif();
 
   return (
     <div 
-    className='h-auto w-11/12 mx-auto bg-[rgba(71,166,77,0.51)] flex items-center justify-center flex-col gap-2 rounded-md'>
+    className='h-auto w-11/12 mx-auto bg-[rgba(85,124,158,0.51)] border border-black flex items-center justify-center flex-col gap-2 rounded-md'>
        
         <h1 
         className='text-2xl text-center font-semibold '>
