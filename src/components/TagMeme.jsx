@@ -22,7 +22,7 @@ function TagMeme() {
         </div>
 
         {
-            loading ? (<Loading/>):(<img src={gif} alt="" className='h-60 w-auto' />)
+            loading ? (<Loading/>):(<img src={gif} alt="" className='h-60 w-auto rounded-md' />)
         }
 
         <div 

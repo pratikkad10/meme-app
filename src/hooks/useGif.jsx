@@ -13,7 +13,7 @@ function useGif() {
     async function getGif(tag){
         setLoading(true);
         const res=await axios.get(tag ? url + `&tag=${tag}`: url)
-        setGif(res.data.data.images.original.url);
+        setGif(res.data.data.images.downsized_large.url);
         setLoading(false);
             
     }
